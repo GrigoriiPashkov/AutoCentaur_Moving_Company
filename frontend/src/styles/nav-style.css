@@ -1,0 +1,247 @@
+@import "/src/styles/main.css";
+body {
+  font-family: "Oswald", sans-serif;
+  margin: 0;
+}
+
+/* Left Navigation for Medium and Large Screens */
+.left-navigation {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 17vw;
+  min-width: 270px;
+  height: 100vh;
+  background-color: #2d3e4f;
+  color: #fff;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+.left-nav-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-link {
+  display: block;
+  padding: 20px;
+  padding-bottom: 0px;
+  text-align: center;
+  text-decoration: none;
+  color: #cf404d;
+}
+.logo-image {
+  max-width: 100%;
+  height: 80px;
+  margin-top: 150px;
+}
+
+.logo-text {
+  margin: 0;
+
+  font-size: 30px;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 3px;
+}
+
+.nav-menu {
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  display: block;
+  padding: 15px 15px;
+  font-size: 20px;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+  background-color: #d24e4e;
+}
+
+.hamburger-button {
+  display: none;
+}
+
+.social-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.social-icon-link {
+  margin: 0 5px;
+}
+
+.social-icon-link img {
+  max-width: 30px;
+  height: auto;
+  margin: 0 2px;
+  transition: opacity 0.3s;
+}
+
+.social-icon-link img:hover {
+  opacity: 0.5;
+}
+.social-icon-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.social-icon-container img {
+  max-width: 30px;
+  margin: 0 7px;
+}
+.tooltip {
+  visibility: hidden;
+  background-color: rgba(45, 62, 79, 0.5);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 10px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.social-icon-container:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+@media (max-width: 1080px) {
+  .left-navigation {
+    height: auto;
+    max-width: 100%;
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+  }
+  .App {
+    flex-direction: column;
+  }
+
+  .logo-text {
+    font-size: 25px;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  .left-nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .logo-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .logo-image-container {
+    display: block;
+  }
+
+  .logo-image {
+    width: 45px;
+    height: auto;
+    margin-top: 0px;
+    margin-left: 10px;
+  }
+  .nav-link {
+    text-align: center;
+  }
+
+  .hamburger-button {
+    display: block;
+    width: 30px;
+    height: 22px;
+    position: absolute;
+    top: 35px;
+    right: 20px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    z-index: 1020;
+  }
+
+  .hamburger-button span {
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s;
+  }
+
+  .hamburger-button span:nth-child(1) {
+    top: 0;
+  }
+
+  .hamburger-button span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .hamburger-button span:nth-child(3) {
+    bottom: 0;
+  }
+  .nav-menu {
+    display: none;
+  }
+
+  .nav-link {
+    text-align: left;
+    padding: 10px 20px;
+  }
+  .hamburger-button.active span:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  .hamburger-button.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-button.active span:nth-child(3) {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+  }
+  .nav-menu.show {
+    display: block;
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    width: 150px;
+    height: auto;
+    background-color: rgba(45, 62, 79, 0.9);
+    z-index: 1010;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.7);
+  }
+  .social-footer {
+    display: none;
+  }
+}
