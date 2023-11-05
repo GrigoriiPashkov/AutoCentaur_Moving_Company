@@ -76,21 +76,28 @@ const Contactus = () => {
     e.preventDefault();
 
     if (Object.values(errors).every((msg) => msg === "")) {
-      emailjs.sendForm("", "", form.current, "").then(
-        (result) => {
-          console.log(result.text);
-          form.current.reset();
-          setMessage("Your request has been sent successfully!");
-          setErrors({});
-          setTimeout(() => setMessage(""), 5000);
-        },
-        (error) => {
-          console.log(error.text);
-          setMessage("Failed to send the request.");
+      emailjs
+        .sendForm(
+          "service_bbr5g5i",
+          "template_sz1yxbh",
+          form.current,
+          "6ae18Fnc2ktUTqeoX"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            form.current.reset();
+            setMessage("Your request has been sent successfully!");
+            setErrors({});
+            setTimeout(() => setMessage(""), 5000);
+          },
+          (error) => {
+            console.log(error.text);
+            setMessage("Failed to send the request.");
 
-          setTimeout(() => setMessage(""), 5000);
-        }
-      );
+            setTimeout(() => setMessage(""), 5000);
+          }
+        );
     } else {
       setMessage("Please correct the errors before submitting.");
 
