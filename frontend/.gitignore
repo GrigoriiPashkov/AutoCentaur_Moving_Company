@@ -14,11 +14,33 @@ build
 
 # misc
 .DS_Store
+.env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+# Editor directories and files
+.DS_Store
+*.swp
+*.swo
+*~
+# Firebase files
+
+serviceAccountKey.json
+.firebase/
+firebase-debug.log
+firestore-debug.log
+
+# Firebase Rules and Indexes (if sensitive)
+firestore.rules
+firestore.indexes.json
+# Other
+*.tmp
+tmp/
+*.cache
+cache/

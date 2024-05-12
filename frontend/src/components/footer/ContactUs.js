@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
+
 import "../../styles/contactus.css";
 
 const Contactus = () => {
@@ -78,10 +79,10 @@ const Contactus = () => {
     if (Object.values(errors).every((msg) => msg === "")) {
       emailjs
         .sendForm(
-          "service_bbr5g5i",
-          "template_sz1yxbh",
+          process.env.REACT_APP_EMAILJS_SERVICE_ID,
+          process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
           form.current,
-          "6ae18Fnc2ktUTqeoX"
+          process.env.REACT_APP_EMAILJS_USER_ID
         )
         .then(
           (result) => {

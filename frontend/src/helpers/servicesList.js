@@ -4,12 +4,12 @@ import delivery from "../img/delivery.jpg";
 import piano from "../img/piano.jpg";
 import huttub from "../img/hottub.jpg";
 import packing_photo from "../img/packing.jpg";
-import frontRes_move from "../img/frontRes_move.jpg";
+import frontRes_move from "../img/frontRes_move1.jpg";
 import frontLong_dist from "../img/long_dist_front.jpg";
-import front_delivery from "../img/front_delivery.jpg";
-import front_piano from "../img/front_piano.jpg";
-import front_huttub from "../img/front_huttub.jpg";
-import front_packing from "../img/front_packing.jpg";
+import front_delivery from "../img/front_delivery1.jpg";
+import front_piano from "../img/front_piano1.jpg";
+import front_huttub from "../img/front_huttub1.jpg";
+import front_packing from "../img/front_packing1.jpg";
 const services = [
   {
     title: "Residential Moving",

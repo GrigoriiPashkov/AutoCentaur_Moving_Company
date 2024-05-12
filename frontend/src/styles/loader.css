@@ -1,0 +1,49 @@
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.truck-body {
+  position: relative;
+  width: 300px; /* Adjust as necessary */
+  background: transparent;
+}
+
+.truck-img {
+  width: 100%;
+  background: transparent;
+}
+
+.wheels {
+  position: absolute;
+  width: 100%;
+  top: 5%; /* Adjust to place the wheels vertically */
+}
+
+.wheel-img {
+  position: absolute;
+  width: 300px; /* Adjust the size as necessary */
+  animation: spin 2s infinite linear;
+}
+
+.wheel-img1 {
+  left: 29.8%; /* Adjust based on the truck image */
+}
+
+.wheel-img2 {
+  right: 12%; /* Adjust based on the truck image */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
